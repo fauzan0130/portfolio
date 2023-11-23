@@ -1,0 +1,236 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: black !important;
+    color: aquamarine;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* Navigation Bar */
+.logo img {
+    border-radius: 50%;
+    height: 70px;
+    width: 75px;
+}
+#main,
+.menu,
+.close {
+    display: none;
+}
+.navigationbar {
+    margin: 20px 20px;
+    min-height: 5vh;
+    display: flex;
+    z-index: 100;
+    position: sticky;
+    /* top: -20px; */
+    background-color: black;
+}
+.nav-list {
+    display: flex;
+    margin: 10px 30px;
+    list-style: none;
+}
+.nav-list li {
+    margin: 0 30px;
+    list-style: none;
+}
+.nav-list li a{
+    font-size: 22px;
+    text-decoration: none;
+    color: aquamarine;
+}
+.nav-list li a:hover {
+    color: gray;
+}
+
+/*  */
+.heading{
+    margin: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.heading-text{
+    text-align: left;
+}
+.heading-text h1{
+    font-weight: 900;
+    font-size: 70px;
+    margin: -20px 0;
+}
+.heading-text h3{
+    color: white;
+}
+
+
+/* -- */
+.projects-main{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.projects-a{
+    text-decoration: none;
+    color: white !important;
+}
+.projects{
+    margin: 20px 50px 120px 120px;
+    /* margin-bottom: 100px; */
+    /* margin: 150px 50px 0 0; */
+}
+.projects h2, .contact h2 {
+    font-size: 50px;
+    text-align: center;
+}
+.card{
+    border: 1px solid white;
+    border-radius: 10px;
+    color: white;
+    padding: 20px;
+    height: 100%;
+}
+.card img{
+    border-radius: 10px 10px 0 0;
+}
+.card h3{
+    color: aquamarine;
+}
+.card h3, p{
+    text-align: justify;
+}
+.hr-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hr{
+    border: 1px solid white;
+    width: 90%;
+}
+
+/* ------------- */
+.contact-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+form{
+    margin: 20px;
+}
+form div{
+    margin: 30px 0;
+}
+input{
+    margin: 5px 0;
+    width: 150%;
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+
+
+
+@media screen and (max-width: 640px){
+    #main,
+    .menu,
+    .close {
+        display: inline;
+    }
+    #main {
+        position: fixed;
+        cursor: pointer;
+        font-size: 30px;
+        color: darkred;
+        transition: all 0.4s;
+        top: 15px;
+        left: 10px;
+        z-index: 100;
+        font-weight: bolder;
+    }
+    .logo {
+        margin-left: 70px;
+    }
+    .sidemenu {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: -25px;
+        left: -20px;
+        height: 100%;
+        width: 0px;
+        background-color: aqua;
+        z-index: 100;
+        padding-top: 100px;
+        overflow: hidden;
+        transition: all 0.4s;
+    }
+    .nav-list {
+        flex-direction: column;
+    }
+    .sidemenu li {
+        list-style: none;
+    }
+    .sidemenu li a {
+        padding: 12px 7px 45px 12px;
+        text-decoration: none;
+        font-size: 20px;
+        color: darkred;
+        display: block;
+    }
+    .sidemenu li a:hover {
+        color: grey;
+    }
+    .sidemenu .close {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 35px;
+        margin-left: 30px;
+    }
+    /* ------- */
+    .heading{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 30%;
+    }
+    .heading-text h1{
+        font-size: 90px;
+    }
+    .hr-main{
+        margin-left: 40%;
+    }
+
+
+
+    .projects-main{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .projects{
+        margin: 40px 50px 120px 120px;
+    }
+    .card{
+        margin: 40px 10px;
+        width: 100%;
+        height: 90%;
+    }
+
+
+
+
+    .contact-main{
+        flex-direction: column;
+    }
+    .contact h2, .projects h2{
+        margin-left: 40%
+    }
+    .contact-img{
+        margin-left: 40%
+    }
+}
